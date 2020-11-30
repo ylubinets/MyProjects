@@ -76,13 +76,13 @@ span {
 }
 main {
     display: flex;
+    justify-content: space-between;
 }
 .picture {
     width: 885px;
     height: 529px;
     border: 1px solid #000000;
     margin-top: 50px;
-    margin-left: 52px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -98,7 +98,6 @@ img:hover {
     line-height: 24px;
     color: #2C2C2C;
     width: 885px;
-    margin-left: 52px;
 }
 .text__first {
     margin-top: 37px;
