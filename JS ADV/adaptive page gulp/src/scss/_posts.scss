@@ -1,0 +1,92 @@
+.posts {
+  &__title {
+    margin-bottom: 23px;
+    margin-top: 38px;
+    text-align: left;
+  }
+
+  &__gallery {
+    padding-bottom: 10px;
+
+    .item_1 {
+      grid-area: item_1;
+    }
+
+    .item_2 {
+      grid-area: item_2;
+    }
+
+    .item_3 {
+      grid-area: item_3;
+    }
+
+    .item_4 {
+      grid-area: item_4;
+    }
+
+    @include large {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 25px;
+      grid-template-areas:
+      "item_1 item_3"
+      "item_2 item_4";
+    }
+  }
+
+  &__item {
+    padding-bottom: 28px;
+    @include small {
+      display: flex;
+    }
+
+    &:last-child {
+      display: none;
+      @include small {
+        display: flex;
+      }
+    }
+  }
+}
+
+.post {
+  &__about {
+    @include small {
+      margin-left: 20px;
+    }
+  }
+
+  &__title {
+    margin-top: 11px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 30px;
+    color: #4E4E4E;
+    @include small {
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 20px;
+    color: #7C7C7C;
+    @include small {
+      font-size: 12px;
+    }
+  }
+
+  &__text {
+    display: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    color: #5C5C5C;
+    @include small {
+      display: initial;
+    }
+  }
+}
